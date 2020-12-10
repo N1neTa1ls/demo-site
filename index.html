@@ -11,15 +11,29 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
+        <div class="menu-btn" onclick="openMenu('header', 'open-menu')">
+            <span>
+            </span>
+        </div>
         <div class="top-line">
-            <ul class="top-nav">
-                <li><a href="">Доставка</a></li>
-                <li><a href="">Оплата</a></li>
-                <li><a href="">Отзывы</a></li>
-                <li><a href="">Вопрос-ответ</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
+            <div class="menu-container">
+                <ul class="tird-nav">
+                    <li><a href="">Парикмахерская</a></li>
+                    <li><a href="">Барбершоп</a></li>
+                    <li><a href="">Маникюр</a></li>
+                    <li><a href="">Педикюр</a></li>
+                    <li><a href="">Массаж</a></li>
+                    <li><a href="">Мебель</a></li>
+                </ul>
+                <ul class="top-nav">
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Отзывы</a></li>
+                    <li><a href="">Вопрос-ответ</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
         </div>
         <div class="second-line">
             <div class="container">
@@ -36,10 +50,9 @@
                     <button class="button">Обратный звонок</button>
                 </div>
             </div>
-        </div>
+        </div> 
         <hr class="gray-line">
         </hr>
-        <!-- <div style="border-bottom: 1px solid #EFEFEF;"></div> -->
         <div class="tird-line">
             <ul class="tird-nav">
                 <li><a href="">Парикмахерская</a></li>
@@ -54,7 +67,7 @@
     <div class="promo">
         <div class="container">
             <div class="promo-txt">
-                <h1>Наташа енот</h1>
+                <h1>Супер кресло</h1>
                 <p>Текст акции всегда отражает суть, а не просто болтовню, поэтому внимательнее</p>
                 <button class="button">Подробнее</button>
             </div>
@@ -63,7 +76,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+   <div class="container">
         <h2>Специальные предложения</h2>
         <div class="spec-offer">
             <div class="chear">
@@ -264,6 +277,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function openMenu(idElement, className) {
+            let a = document.getElementById(idElement).classList;
+            let b = a.contains(className);
+            if (b) {
+                a.remove(className);
+            } else {
+                a.add(className);
+            }
+        }
+    </script>
 </body>
 
 </html>
